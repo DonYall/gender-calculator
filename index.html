@@ -69,9 +69,11 @@
 </head>
 
 <body>
-    <h1>Gender Calculator</h1>
+    <h1>Gender Calculator using the DonYall Scale</h1>
 
-    <p>Please enter your percentage for each gender identity:</p>
+    <p>Please enter your percentage for each gender identity (0 if you do not identify with it):</p>
+    <p>Note: The DonYall scale runs from -5 to +5, and there is no real significance to the magnitude of the number.</p>
+    <a href="https://gender.fandom.com/wiki/List_Of_Genders">A list of genders for more information</a>
 
     <form id="gender-form">
         <label for="male">Male:</label>
@@ -154,7 +156,7 @@
         <input type="submit" value="Calculate">
     </form>
 
-    <p>Your gender score is: <span id="score"></span>%</p>
+    <p>Your gender score is: <span id="score"></span> on the DonYall scale</p>
 
     <script src="script.js"></script>
 </body>
