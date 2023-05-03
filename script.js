@@ -10,7 +10,7 @@ form.addEventListener('submit', function (event) {
     const ABINARY = parseFloat(document.getElementById("abinary").value) || 0;
     const ACEGENDER = parseFloat(document.getElementById("acegender").value) || 0;
     const AGENDER = parseFloat(document.getElementById("agender").value) || 0;
-    const ANDROGYNE = parseFloat(document.getElementById("androgynous").value) || 0;
+    const ANDROGYNE = parseFloat(document.getElementById("androgyne").value) || 0;
     const AZURGIRL = parseFloat(document.getElementById("azurgirl").value) || 0;
     const BIGENDER = parseFloat(document.getElementById("bigender").value) || 0;
     const DEMIBOY = parseFloat(document.getElementById("demiboy").value) || 0;
