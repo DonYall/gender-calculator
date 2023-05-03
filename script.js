@@ -44,7 +44,8 @@ form.addEventListener('submit', function (event) {
             score += genderArr[i];
         }
     }
-    score /= j;
+    score /= (j*100);
+    score = Math.sqrt(score) * 100;
 
     // Display gender score
     scoreSpan.textContent = score.toFixed(2);
