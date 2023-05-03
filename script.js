@@ -44,8 +44,12 @@ form.addEventListener('submit', function (event) {
             score += genderArr[i];
         }
     }
+    if (j == 0) {
+        j = 1;
+    }
     score /= (j*100);
-    score = Math.sqrt(score) * 10;
+    // Implement the vincent algorithm
+    score = Math.sqrt(score) - 5;
 
     // Display gender score
     scoreSpan.textContent = score.toFixed(2);
