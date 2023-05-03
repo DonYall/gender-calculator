@@ -52,5 +52,5 @@ form.addEventListener('submit', function (event) {
     score = Math.sqrt(score) - 5;
 
     // Display gender score
-    scoreSpan.textContent = score.toFixed(2);
+    scoreSpan.textContent = score.toFixed(2) + " on the DonYall scale.";
 });
