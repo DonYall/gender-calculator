@@ -48,7 +48,7 @@ form.addEventListener('submit', function (event) {
     }
     score /= (j*10);
     // Implement the vincent algorithm
-    //score = Math.sqrt(score) - 5;
+    // score = Math.sqrt(score) - 5;
 
     // Display gender score
     scoreSpan.textContent = score.toFixed(2) + " on the DonYall scale.";
