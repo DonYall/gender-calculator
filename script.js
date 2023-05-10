@@ -46,7 +46,7 @@ form.addEventListener('submit', function (event) {
     if (j == 0) {
         j = 1;
     }
-    score /= (j*10);
+    score /= (j*1000);
     // Implement the vincent algorithm
     // score = Math.sqrt(score) - 5;
 
