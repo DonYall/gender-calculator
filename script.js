@@ -11,7 +11,6 @@ form.addEventListener('submit', function (event) {
     const ACEGENDER = parseFloat(document.getElementById("acegender").value) || 0;
     const AGENDER = parseFloat(document.getElementById("agender").value) || 0;
     const ANDROGYNE = parseFloat(document.getElementById("androgyne").value) || 0;
-    const AZURGIRL = parseFloat(document.getElementById("azurgirl").value) || 0;
     const BIGENDER = parseFloat(document.getElementById("bigender").value) || 0;
     const DEMIBOY = parseFloat(document.getElementById("demiboy").value) || 0;
     const DEMIGIRL = parseFloat(document.getElementById("demigirl").value) || 0;
@@ -30,16 +29,16 @@ form.addEventListener('submit', function (event) {
     const TOMGIRL = parseFloat(document.getElementById("tomgirl").value) || 0;
     const XENOGENDER = parseFloat(document.getElementById("xenogender").value) || 0;
 
-    const genderArr = [MALE * 100, FEMALE * 100, AMBIGENDER * 75, ABINARY * 20, ACEGENDER * 25, AGENDER, ANDROGYNE * 80,
-    AZURGIRL * 50, BIGENDER * 55, DEMIBOY * 90, DEMIGIRL * 90, GENDERFAE * 19, GENDERFLUID * 23, NEOBOY * 70, NEOGIRL * 70,
-    NONBINARY * 60, PANGENDER * 2, POLYGENDER * 22, QUADGENDER * 30, QUINTGENDER * 24, TRANSGENDER * 31, TRIGENDER * 38,
-    TOMBOY * 62, TOMGIRL * 62, XENOGENDER * 85]
+    const genderArr = [MALE * 50, FEMALE * 49, AMBIGENDER * 25, ABINARY * -30, ACEGENDER * -25, AGENDER * -50, ANDROGYNE * 30,
+    BIGENDER * 5, DEMIBOY * 40, DEMIGIRL * 39, GENDERFAE * -31, GENDERFLUID * -27, NEOBOY * 20, NEOGIRL * 19,
+    NONBINARY * 10, PANGENDER * -48, POLYGENDER * -28, QUADGENDER * -20, QUINTGENDER * -26, TRANSGENDER * -29, TRIGENDER * -12,
+    TOMBOY * 12, TOMGIRL * 11, XENOGENDER * 35]
 
-    // A function that outputs your gender score from 1-100
+    // A function that outputs a gender score from -5 to +5
     let score = 0;
     let j = 0;
     for (let i = 0; i < genderArr.length; i++) {
-        if (genderArr[i] > 0) {
+        if (genderArr[i] != 0) {
             j++;
             score += genderArr[i];
         }
@@ -47,9 +46,9 @@ form.addEventListener('submit', function (event) {
     if (j == 0) {
         j = 1;
     }
-    score /= (j*100);
+    score /= (j*10);
     // Implement the vincent algorithm
-    score = Math.sqrt(score) - 5;
+    //score = Math.sqrt(score) - 5;
 
     // Display gender score
     scoreSpan.textContent = score.toFixed(2) + " on the DonYall scale.";
